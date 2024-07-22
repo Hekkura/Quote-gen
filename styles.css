@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Urbanist", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #525f78;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Overlay */
+img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -20;
+    opacity: 0.3;
+    /* background-color:#25252531; */
+
+    transition: opacity 1s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    opacity: 1;
+    background-color: #25252500;
+}
+
+/* Main container styling */
+.quote-container {
+    width: 80vw;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 25;
+    width: 75vw;
+    height: 50vh;
+    padding: 3em 4em;
+    border-radius: 10px;
+}
+
+.quote__text {
+    font-weight: 600;
+    font-size: 2rem;
+    /* line-height: 1.2 */
+}
+
+.long-quote {
+    font-size: 1.3rem;
+    font-weight: 600;
+    /* line-height: 0.7 */
+}
+
+.xl-quote {
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* line-height: 0.5 */
+}
+
+.quote__author {
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.btn-container {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    z-index: 60;
+}
+
+button {
+    cursor: pointer;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1.2em;
+    outline: none;
+    background: whitesmoke;
+    color: rgb(25, 25, 25);
+    max-width: 55%;
+    min-width: 128px;
+}
+
+button:hover {
+    filter: brightness(155%);
+}
+
+button:active {
+    transform: translateY(0.2rem);
+    box-shadow: 0 0.1rem (255, 255, 255, 0.6);
+}
+
+#twitter:hover,
+#twitter:focus {
+    color: #38a1f3;
+}
+
+#new-quote:hover,
+#new-quote:focus {
+    color: #33e8cd;
+}
+
+/* ========== LOADER ANIMATIONS ==========*/
+.loader {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    left: 50.7%;
+    top: 50%;
+    margin: -100px 0 0 -100px;
+    /* display: none; */
+    z-index: 50;
+}
+
+.hex-brick {
+    background: #000000;
+    width: 28px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    animation-name: fade00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.h2 {
+    transform: rotate(60deg);
+}
+
+.h3 {
+    transform: rotate(-60deg);
+}
+
+.gel {
+    height: 28px;
+    width: 28px;
+    transition: all 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.center-gel {
+    margin-left: -15px;
+    margin-top: -15px;
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.c1 {
+    margin-left: -30px;
+}
+
+.c2 {
+    margin-right: -30px;
+}
+
+.r1 {
+    margin-top: -41px;
+
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.25s;
+}
+
+.r2 {
+    margin-top: -15px;
+    margin-left: -45px;
+
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+
+.r2b {
+    margin-top: -15px;
+    margin-left: 15px;
+
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+
+.r3 {
+    margin-top: 11px;
+
+    animation-name: pulse00;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.7s;
+}
+
+@keyframes pulse00 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.01);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade00 {
+    0% {
+        background: #252525;
+    }
+    50% {
+        background: #000000;
+    }
+    100% {
+        background: #353535;
+    }
+}
